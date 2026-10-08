@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Memories</title>
+  <title>Our First Memories ✨</title>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
-      background: linear-gradient(135deg, #ffe066, #70a1ff, #ff7979);
-      background-size: 200% 200%;
-      animation: gradientShift 10s ease infinite;
+      background: linear-gradient(135deg, #ff9ff3, #feca57, #5f27cd, #ff6b6b);
+      background-size: 300% 300%;
+      animation: colorShift 15s ease infinite;
       font-family: 'Quicksand', sans-serif;
       margin: 0;
       color: #3d3d3d;
@@ -20,140 +20,96 @@
       padding: 20px;
     }
     
-    @keyframes gradientShift {
+    @keyframes colorShift {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
     
-    h1 {
-      font-family: 'Fredoka One', cursive;
-      color: #ffffff;
-      margin-top: 20px;
-      margin-bottom: 30px;
-      text-shadow: 2px 4px 6px rgba(0,0,0,0.2);
-    }
-    
-    .button-group {
-      display: flex;
-      gap: 15px;
-      margin-bottom: 30px;
-    }
-    
-    button {
-      background-color: #ffffff;
-      color: #ff4757;
-      border: none;
-      padding: 15px 30px;
-      border-radius: 25px;
-      font-size: 1.1rem;
-      font-family: 'Fredoka One', cursive;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    
-    button:hover {
-      transform: translateY(-4px) scale(1.05);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-    }
-    
-    .content-section {
+    .container {
       background-color: rgba(255, 255, 255, 0.95);
-      padding: 30px;
-      border-radius: 25px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      max-width: 500px;
+      padding: 40px;
+      border-radius: 30px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+      max-width: 600px;
       width: 90%;
-      display: none;
-      animation: fadeIn 0.4s ease-in-out;
       text-align: center;
       position: relative;
     }
-    
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px) scale(0.95); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
-    }
-    
-    .content-section.active {
-      display: block;
-    }
-    
-    h2 {
+
+    h1 {
       font-family: 'Fredoka One', cursive;
       color: #ff6b81;
       margin-top: 0;
-    }
-    
-    .address {
-      font-style: italic;
-      color: #70a1ff;
-      border-bottom: 2px dashed #ffeaa7;
-      padding-bottom: 10px;
       margin-bottom: 20px;
-      font-weight: bold;
-      font-family: 'Fredoka One', cursive;
+      font-size: 2.5rem;
     }
-    
+
+    .subtitle {
+      font-family: 'Fredoka One', cursive;
+      color: #54a0ff;
+      margin-bottom: 30px;
+      font-size: 1.3rem;
+    }
+
     ul {
-      padding-left: 25px;
+      padding-left: 0;
+      list-style: none;
       text-align: left;
     }
     
     li {
+      background-color: #f1f2f6;
       margin-bottom: 15px;
+      padding: 15px 20px;
+      border-radius: 15px;
       line-height: 1.4;
-      list-style-type: "💖 ";
       font-weight: 600;
       color: #57606f;
+      display: flex;
+      align-items: center;
+      transition: transform 0.2s, background-color 0.2s;
     }
 
-    .sticker {
-      font-size: 2rem;
-      margin-top: 15px;
+    li:hover {
+      transform: scale(1.02);
+      background-color: #ffeaa7;
+    }
+
+    .icon {
+      margin-right: 15px;
+      font-size: 1.5rem;
+    }
+
+    .sticker-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      font-size: 2.5rem;
     }
   </style>
 </head>
 <body>
 
-  <h1>Our Trip Memories 🌟</h1>
+  <div class="container">
+    <h1>Our First Trip & Stay 💖</h1>
+    <p class="subtitle">All the little things I love about you...</p>
 
-  <div class="button-group">
-    <button onclick="showContent('airbnb')">M 9/8</button>
-    <button onclick="showContent('travel')">First Trip Together</button>
-  </div>
-
-  <div id="airbnb" class="content-section active">
-    <h2>Our Airbnb Memories</h2>
-    <p class="address">Address: M 9/8</p>
     <ul>
-      <li>You lifted me in your arms the moment we met.</li>
-      <li>We shared sweet cheesecake and good coffee.</li>
-      <li>You introduced me to the movie "Yeh Dooriyan."</li>
-      <li>Late-night Maggie and cuddling together for the first time.</li>
-      <li>You were so calm when my mom called suddenly.</li>
-      <li>You managed our group's mess and reassured me.</li>
+      <li><span class="icon">🥰</span>The moment we met, you lifted me in your arms.</li>
+      <li><span class="icon">🍰</span>Sharing sweet cheesecake and delicious coffee.</li>
+      <li><span class="icon">🎬</span>Introducing me to the movie "Yeh Dooriyan."</li>
+      <li><span class="icon">🍜</span>Late-night Maggie and cuddling together for the first time.</li>
+      <li><span class="icon">🧘‍♀️</span>Being so calm and understanding when my mom called suddenly.</li>
+      <li><span class="icon">🤝</span>Managing the group's mess and reassuring me.</li>
+      <li><span class="icon">🌟</span>Blending in so perfectly with my friends.</li>
     </ul>
-    <div class="sticker">🍰☕✨</div>
-  </div>
 
-  <div id="travel" class="content-section">
-    <h2>Amritsar & Chandigarh</h2>
-    <ul>
-      <li>Memories from the rest of our trip will be added here soon.</li>
-    </ul>
-    <div class="sticker">📸 Amritsar & Chandigarh ✈️</div>
+    <div class="sticker-grid">
+      <span>💛</span><span>✈️</span><span>🍕</span><span>💙</span><span>✨</span>
+    </div>
   </div>
-
-  <script>
-    function showContent(sectionId) {
-      document.querySelectorAll('.content-section').forEach(section => {
-        section.classList.remove('active');
-      });
-      document.getElementById(sectionId).classList.add('active');
-    }
-  </script>
 
 </body>
 </html>
