@@ -1,115 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our First Memories ✨</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background: linear-gradient(135deg, #ff9ff3, #feca57, #5f27cd, #ff6b6b);
-      background-size: 300% 300%;
-      animation: colorShift 15s ease infinite;
-      font-family: 'Quicksand', sans-serif;
-      margin: 0;
-      color: #3d3d3d;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-    }
-    
-    @keyframes colorShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    
-    .container {
-      background-color: rgba(255, 255, 255, 0.95);
-      padding: 40px;
-      border-radius: 30px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-      max-width: 600px;
-      width: 90%;
-      text-align: center;
-      position: relative;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Things I Loved About You 💕</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --pink: #ff8fb8;
+    --peach: #ffc9a8;
+    --mint: #b5ead7;
+    --lilac: #d4c1ff;
+    --butter: #fff3b0;
+    --ink: #5a3a52;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Quicksand', 'Segoe UI', sans-serif;
+    color: var(--ink);
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffe0ec, #ffe9d6, #e3f7ee, #ece3ff);
+    background-size: 300% 300%;
+    animation: drift 18s ease infinite;
+    overflow-x: hidden;
+  }
+  @keyframes drift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .hearts { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+  .heart {
+    position: absolute; bottom: -40px;
+    animation: rise linear forwards;
+    opacity: .8;
+  }
+  @keyframes rise {
+    to { transform: translateY(-115vh) rotate(25deg); opacity: 0; }
+  }
+  main {
+    position: relative; z-index: 1;
+    max-width: 720px; margin: 0 auto;
+    padding: 48px 18px 70px;
+  }
+  header { text-align: center; margin-bottom: 36px; }
+  h1 {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    font-size: clamp(2.2rem, 8vw, 3.6rem);
+    line-height: 1.25;
+    color: #ff5c97;
+    text-shadow: 3px 3px 0 #fff, 5px 5px 0 var(--peach);
+  }
+  .sub { margin-top: 14px; font-size: 1.1rem; font-weight: 700; }
+  .sticker-row { font-size: 2rem; margin-top: 12px; letter-spacing: 6px; }
 
-    h1 {
-      font-family: 'Fredoka One', cursive;
-      color: #ff6b81;
-      margin-top: 0;
-      margin-bottom: 20px;
-      font-size: 2.5rem;
-    }
+  .card {
+    position: relative;
+    background: #fff;
+    border: 3px dashed var(--pink);
+    border-radius: 26px;
+    padding: 20px 20px 20px 78px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 0 rgba(255, 143, 184, .25);
+    font-size: 1.05rem;
+    line-height: 1.55;
+  }
+  .card:nth-child(4n+2) { border-color: #7fd6b3; box-shadow: 0 8px 0 rgba(127,214,179,.3); transform: rotate(.6deg); }
+  .card:nth-child(4n+3) { border-color: #b79cff; box-shadow: 0 8px 0 rgba(183,156,255,.3); transform: rotate(-.6deg); }
+  .card:nth-child(4n+4) { border-color: #ffb27d; box-shadow: 0 8px 0 rgba(255,178,125,.3); }
+  .card .sticker {
+    position: absolute; left: 14px; top: 50%;
+    transform: translateY(-50%) rotate(-8deg);
+    font-size: 2.6rem;
+    width: 52px; text-align: center;
+  }
+  .card b { color: #ff5c97; }
 
-    .subtitle {
-      font-family: 'Fredoka One', cursive;
-      color: #54a0ff;
-      margin-bottom: 30px;
-      font-size: 1.3rem;
-    }
+  .finale {
+    margin-top: 34px; text-align: center;
+    background: var(--butter);
+    border: 3px solid #fff;
+    border-radius: 30px;
+    padding: 26px 18px;
+    box-shadow: 0 10px 0 rgba(255,201,168,.6);
+  }
+  .finale p { font-family: 'Pacifico', cursive; font-size: 1.5rem; color: #ff5c97; line-height: 1.5; }
+  .finale .sig { margin-top: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--ink); }
 
-    ul {
-      padding-left: 0;
-      list-style: none;
-      text-align: left;
-    }
-    
-    li {
-      background-color: #f1f2f6;
-      margin-bottom: 15px;
-      padding: 15px 20px;
-      border-radius: 15px;
-      line-height: 1.4;
-      font-weight: 600;
-      color: #57606f;
-      display: flex;
-      align-items: center;
-      transition: transform 0.2s, background-color 0.2s;
-    }
-
-    li:hover {
-      transform: scale(1.02);
-      background-color: #ffeaa7;
-    }
-
-    .icon {
-      margin-right: 15px;
-      font-size: 1.5rem;
-    }
-
-    .sticker-grid {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
-      font-size: 2.5rem;
-    }
-  </style>
+  @media (max-width: 480px) {
+    .card { padding: 16px 14px 16px 66px; font-size: 1rem; }
+    .card .sticker { font-size: 2.2rem; left: 10px; width: 46px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    body { animation: none; }
+    .hearts { display: none; }
+  }
+</style>
 </head>
 <body>
+<div class="hearts" id="hearts" aria-hidden="true"></div>
 
-  <div class="container">
-    <h1>Our First Trip & Stay 💖</h1>
-    <p class="subtitle">All the little things I love about you...</p>
+<main>
+  <header>
+    <h1>Things I Loved About You 💕</h1>
+    <p class="sub">From our first stay together ✨</p>
+    <div class="sticker-row" aria-hidden="true">🌸🧸🍓🎀🌈</div>
+  </header>
 
-    <ul>
-      <li><span class="icon">🥰</span>The moment we met, you lifted me in your arms.</li>
-      <li><span class="icon">🍰</span>Sharing sweet cheesecake and delicious coffee.</li>
-      <li><span class="icon">🎬</span>Introducing me to the movie "Yeh Dooriyan."</li>
-      <li><span class="icon">🍜</span>Late-night Maggie and cuddling together for the first time.</li>
-      <li><span class="icon">🧘‍♀️</span>Being so calm and understanding when my mom called suddenly.</li>
-      <li><span class="icon">🤝</span>Managing the group's mess and reassuring me.</li>
-      <li><span class="icon">🌟</span>Blending in so perfectly with my friends.</li>
-    </ul>
+  <section>
+    <div class="card"><span class="sticker">🤗</span>The moment you saw me, you <b>lifted me in your arms</b>.</div>
 
-    <div class="sticker-grid">
-      <span>💛</span><span>✈️</span><span>🍕</span><span>💙</span><span>✨</span>
-    </div>
+    <div class="card"><span class="sticker">🎬</span>Our <b>first movie night</b>. I loved watching movies with you.</div>
+
+    <div class="card"><span class="sticker">🧸</span>We had the <b>best first cuddles</b>. You are the best cuddler, and so comfy!</div>
+
+    <div class="card"><span class="sticker">☕</span>You make the <b>best coffee</b>.</div>
+
+    <div class="card"><span class="sticker">😌</span>I thought you were short-tempered, but you are so <b>calm</b>, all the time. At that market you wanted to explore, my mom called, and you just said "okay, let's go home" without making any fuss. Your main motive was always to make me <b>comfortable</b>.</div>
+
+    <div class="card"><span class="sticker">🚗</span>All through the trip, in the back seat of the car, you kept <b>caressing and cuddling me</b>.</div>
+
+    <div class="card"><span class="sticker">😴</span>I loved it when I slept on your lap, and I loved it when you slept on mine.</div>
+
+    <div class="card"><span class="sticker">👗</span>We <b>got ready together</b>, and it never felt like our firsts at all.</div>
+
+    <div class="card"><span class="sticker">👭</span>You <b>blended into my friends' circle</b> even when you didn't want to. You kept your ego aside, and you even said sorry once, even though it wasn't really your fault.</div>
+
+    <div class="card"><span class="sticker">📸</span>You capture me in my <b>most raw form</b>.</div>
+
+    <div class="card"><span class="sticker">🍕</span>You make sure we eat the <b>best food</b>.</div>
+
+    <div class="card"><span class="sticker">🥰</span>You keep <b>adoring me</b> all the time.</div>
+
+    <div class="card"><span class="sticker">🫶</span>You are always <b>open to hugs</b>.</div>
+
+    <div class="card"><span class="sticker">💋</span>And you give the <b>best kisses</b>.</div>
+  </section>
+
+  <div class="finale">
+    <p>Thank you for being you 💖</p>
+    <div class="sig">Your cutu patootoo 🌷</div>
   </div>
+</main>
 
+<script>
+  (function () {
+    var box = document.getElementById('hearts');
+    var icons = ['💗', '💖', '💕', '🌸', '✨', '💝'];
+    function spawn() {
+      var h = document.createElement('span');
+      h.className = 'heart';
+      h.textContent = icons[Math.floor(Math.random() * icons.length)];
+      h.style.left = Math.random() * 100 + 'vw';
+      h.style.fontSize = (14 + Math.random() * 22) + 'px';
+      var dur = 7 + Math.random() * 7;
+      h.style.animationDuration = dur + 's';
+      box.appendChild(h);
+      setTimeout(function () { h.remove(); }, dur * 1000);
+    }
+    setInterval(spawn, 700);
+  })();
+</script>
 </body>
 </html>
