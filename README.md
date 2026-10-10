@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Things I Loved About You 💕</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@500;600;700&family=Pacifico&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --pink: #ff8fb8;
@@ -65,8 +65,10 @@
     padding: 20px 20px 20px 78px;
     margin-bottom: 20px;
     box-shadow: 0 8px 0 rgba(255, 143, 184, .25);
+    font-family: 'Mali', 'Quicksand', 'Segoe UI', sans-serif;
+    font-weight: 500;
     font-size: 1.05rem;
-    line-height: 1.55;
+    line-height: 1.65;
   }
   .card:nth-child(4n+2) { border-color: #7fd6b3; box-shadow: 0 8px 0 rgba(127,214,179,.3); transform: rotate(.6deg); }
   .card:nth-child(4n+3) { border-color: #b79cff; box-shadow: 0 8px 0 rgba(183,156,255,.3); transform: rotate(-.6deg); }
@@ -77,7 +79,7 @@
     font-size: 2.6rem;
     width: 52px; text-align: center;
   }
-  .card b { color: #ff5c97; }
+  .card b { color: #ff5c97; font-weight: 700; }
 
   .finale {
     margin-top: 34px; text-align: center;
